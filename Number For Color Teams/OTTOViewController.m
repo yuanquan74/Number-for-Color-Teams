@@ -15,11 +15,15 @@
 @property (weak, nonatomic) IBOutlet UIButton *centerButton;
 @property (weak, nonatomic) IBOutlet UIButton *cornerButton;
 - (IBAction)pushConerButton:(id)sender;
+- (IBAction)clickOnYellow:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *yellowLable;
+
 
 @end
 
 @implementation OTTOViewController {
     NSMutableString * programStatus;
+    OTTOMagicJar *yellowJar;
 }
 
 - (void)viewDidLoad
@@ -30,6 +34,9 @@
     [programStatus setString:@"idle"];
     [[self centerButton] setTitle:@"Start" forState:UIControlStateNormal];
     [[self cornerButton] setTitle:@"Setting" forState:UIControlStateNormal];
+    yellowJar=[[OTTOMagicJar alloc] init];
+    [yellowJar initJar];
+    [yellowJar fillJar:16];
 
 
 }
@@ -76,4 +83,14 @@
         [[self cornerButton] setTitle:@" " forState:UIControlStateNormal];
     }
 }
+
+- (IBAction)clickOnYellow:(id)sender {
+    int myNumber = [yellowJar drawOneTicket];
+    NSString * myString = [NSString stringWithFormat:@"%i",myNumber];
+    
+    [[self yellowLable] setText:myString];
+    
+}
+
+
 @end
