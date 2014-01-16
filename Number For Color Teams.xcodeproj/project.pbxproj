@@ -22,6 +22,7 @@
 		D5D825541884AE5800ACEE9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D825331884AE5800ACEE9E /* UIKit.framework */; };
 		D5D8255C1884AE5800ACEE9E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D5D8255A1884AE5800ACEE9E /* InfoPlist.strings */; };
 		D5D8255E1884AE5800ACEE9E /* Number_For_Color_TeamsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D8255D1884AE5800ACEE9E /* Number_For_Color_TeamsTests.m */; };
+		D5D8256918864D3200ACEE9E /* OTTOMagicJar.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D8256718864D3200ACEE9E /* OTTOMagicJar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		D5D825591884AE5800ACEE9E /* Number For Color TeamsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Number For Color TeamsTests-Info.plist"; sourceTree = "<group>"; };
 		D5D8255B1884AE5800ACEE9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D5D8255D1884AE5800ACEE9E /* Number_For_Color_TeamsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Number_For_Color_TeamsTests.m; sourceTree = "<group>"; };
+		D5D8256718864D3200ACEE9E /* OTTOMagicJar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTTOMagicJar.m; sourceTree = "<group>"; };
+		D5D8256818864D3200ACEE9E /* OTTOMagicJar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTTOMagicJar.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +117,8 @@
 		D5D825351884AE5800ACEE9E /* Number For Color Teams */ = {
 			isa = PBXGroup;
 			children = (
+				D5D8256718864D3200ACEE9E /* OTTOMagicJar.m */,
+				D5D8256818864D3200ACEE9E /* OTTOMagicJar.h */,
 				D5D8253E1884AE5800ACEE9E /* OTTOAppDelegate.h */,
 				D5D8253F1884AE5800ACEE9E /* OTTOAppDelegate.m */,
 				D5D825411884AE5800ACEE9E /* Main_iPhone.storyboard */,
@@ -255,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D825401884AE5800ACEE9E /* OTTOAppDelegate.m in Sources */,
+				D5D8256918864D3200ACEE9E /* OTTOMagicJar.m in Sources */,
 				D5D825491884AE5800ACEE9E /* OTTOViewController.m in Sources */,
 				D5D8253C1884AE5800ACEE9E /* main.m in Sources */,
 			);
