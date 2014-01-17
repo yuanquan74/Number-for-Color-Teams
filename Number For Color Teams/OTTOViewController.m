@@ -24,6 +24,7 @@
 @implementation OTTOViewController {
     NSMutableString * programStatus;
     OTTOMagicJar *yellowJar;
+    int numberOfYellowTickets;
 }
 
 - (void)viewDidLoad
@@ -36,7 +37,8 @@
     [[self cornerButton] setTitle:@"Setting" forState:UIControlStateNormal];
     yellowJar=[[OTTOMagicJar alloc] init];
     [yellowJar initJar];
-    [yellowJar fillJar:16];
+    numberOfYellowTickets=16;
+    [yellowJar fillJar:numberOfYellowTickets];
 
 
 }
@@ -51,6 +53,7 @@
     if ([programStatus isEqualToString:@"in game"]) {
         //add code to do next round
         [[self centerButton] setTitle:@"Next Round" forState:UIControlStateNormal];
+        [yellowJar fillJar:numberOfYellowTickets];
         [[self cornerButton] setTitle:@"End" forState:UIControlStateNormal];
 
     } else if ([programStatus isEqualToString:@"idle"]) {
@@ -85,10 +88,15 @@
 }
 
 - (IBAction)clickOnYellow:(id)sender {
-    int myNumber = [yellowJar drawOneTicket];
-    NSString * myString = [NSString stringWithFormat:@"%i",myNumber];
-    
-    [[self yellowLable] setText:myString];
+    if ([programStatus isEqualToString:@"in game"]) {
+        int myNumber = [yellowJar drawOneTicket];
+        NSString * myString = [NSString stringWithFormat:@"%i",myNumber];
+        
+        [[self yellowLable] setText:myString];
+        return;
+    } else if ([programStatus isEqualToString:@"idle"]) {
+        return;
+    }
     
 }
 
